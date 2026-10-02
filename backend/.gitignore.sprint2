@@ -1,0 +1,7 @@
+# Append these lines to your repository's .gitignore
+.env
+bin/
+obj/
+*.user
+appsettings.Development.json
+appsettings.Local.json

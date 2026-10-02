@@ -1,0 +1,13 @@
+# Local MySQL for development. Password comes from your shell / .env file (never committed).
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?set MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: sneakmart
+    ports:
+      - "3306:3306"
+    volumes:
+      - sneakmart_data:/var/lib/mysql
+volumes:
+  sneakmart_data: {}
